@@ -2,12 +2,13 @@
 
 Send metrics from your app to Redis and see in real-time in your terminal.
 
-```
-var statter = require('statter');
-var stats = new statter.Stats();
+```bash
+npm install statter
 ```
 
-```
+```javascript
+var statter = require('statter');
+var stats = new statter.Stats();
 stats.count('foo');
 ```
 
@@ -32,7 +33,7 @@ using. Handy to see how far message queues are backing up. No method
 for this -- your app will be using the lists however it chooses to.
 
 ```
-LPUSH my-list foo
+LPUSH my-list bar
 ```
 
 
