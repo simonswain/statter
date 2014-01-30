@@ -81,8 +81,7 @@ var stats = new statter.Stats({
   prefix: 'my-prefix',
   redis: {
     host: '127.0.0.1',
-    port: 6379,
-    prefix: ''
+    port: 6379
   }
 });
 
