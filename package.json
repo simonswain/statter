@@ -7,6 +7,13 @@
     "name": "Simon Swain",
     "email": "simon@simonswain.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/simonswain/statter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/simonswain/straw/issues"
+  },
   "main": "index.js",
   "scripts": {
     "test": "grunt test"
