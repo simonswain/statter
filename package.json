@@ -1,0 +1,26 @@
+{
+  "name": "statter",
+  "version": "0.0.1",
+  "description": "Using Redis for metrics",
+  "homepage": "https://github.com/simonswain/statter",
+  "author": {
+    "name": "Simon Swain",
+    "email": "simon@simonswain.com"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "~1.5.2",
+    "async": "~0.2.10",
+    "redis": "~0.10.0",
+    "hiredis": "~0.1.16"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-nodeunit": "~0.3.0"
+  }
+}
