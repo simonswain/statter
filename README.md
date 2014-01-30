@@ -1,5 +1,7 @@
 # Statter
 
+Version 0.0.2
+
 Send metrics from your app to Redis and see in real-time in your terminal.
 
 ```bash
@@ -37,14 +39,14 @@ LPUSH my-list bar
 ```
 
 
-Create a realtime display. The 
+Create a realtime display. The
 
 ```javascript
 var statter = require('../index.js');
 
 var counts = new statter.Counts({
   lengths: [
-    'my-list', 
+    'my-list',
   ],
   counts: [
     'my-count'
@@ -86,3 +88,11 @@ var stats = new statter.Stats({
 });
 
 ```
+
+## Release History
+
+* 31/01/2014 0.0.2 Initial release
+
+## License
+Copyright (c) 2014 Simon Swain
+Licensed under the MIT license.
