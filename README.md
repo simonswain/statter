@@ -1,5 +1,7 @@
 # Statter
 
+Send metrics from your app to Redis and see in real-time in your terminal.
+
 ```
 var statter = require('statter');
 var stats = new statter.Stats();
@@ -9,8 +11,7 @@ var stats = new statter.Stats();
 stats.count('foo');
 ```
 
-
-## usage
+## Usage
 
 Record counts from in your app. Handy for telling how fast things are
 being processed.
@@ -27,14 +28,15 @@ setInterval(function(){
 ```
 
 `lengths` are the number of elements in the Redis Lists your app is
-using. Handy to see how far message queues are backing up.
+using. Handy to see how far message queues are backing up. No method
+for this -- your app will be using the lists however it chooses to.
 
 ```
 LPUSH my-list foo
 ```
 
 
-Create a realtime display
+Create a realtime display. The 
 
 ```javascript
 var statter = require('../index.js');
@@ -60,7 +62,7 @@ my-list                        2        +0/s
 my-count                       3568     +1/s
 ```
 
-# Config
+## Config
 
 You can pass in an object with settings.
 
@@ -69,6 +71,9 @@ You can pass in an object with settings.
 
 `redis` lets you tell Statter where Redis is. Default is
 localhost:6379.
+
+These settings can also be passed in to a `new statter.Counts()` along
+with the lengths and counts.
 
 ```javasctips
 var stats = new statter.Stats({
